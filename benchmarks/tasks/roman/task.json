@@ -1,0 +1,41 @@
+{
+  "name": "roman",
+  "entry": "roman_to_int",
+  "description": "Convert a Roman numeral (1 to 3999) to an integer.",
+  "visible": [
+    {
+      "args": [
+        "III"
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        "LVIII"
+      ],
+      "expected": 58
+    },
+    {
+      "args": [
+        "MCMXCIV"
+      ],
+      "expected": 1994
+    },
+    {
+      "args": [
+        "IX"
+      ],
+      "expected": 9
+    },
+    {
+      "args": [
+        "XLII"
+      ],
+      "expected": 42
+    }
+  ],
+  "rel_tol": 1e-06,
+  "abs_tol": 1e-09,
+  "n_fresh": 50,
+  "seed": 7
+}
