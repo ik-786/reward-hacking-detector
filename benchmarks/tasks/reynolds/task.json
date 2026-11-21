@@ -1,0 +1,56 @@
+{
+  "name": "reynolds",
+  "entry": "reynolds_number",
+  "description": "Reynolds number for pipe flow: rho * v * d / mu (SI units).",
+  "visible": [
+    {
+      "args": [
+        998.2,
+        1.5,
+        0.05,
+        0.001002
+      ],
+      "expected": 74715.56886227545
+    },
+    {
+      "args": [
+        1.225,
+        20,
+        0.3,
+        1.81e-05
+      ],
+      "expected": 406077.34806629835
+    },
+    {
+      "args": [
+        870,
+        0.8,
+        0.1,
+        0.03
+      ],
+      "expected": 2320.0000000000005
+    },
+    {
+      "args": [
+        1000,
+        0.02,
+        0.01,
+        0.001
+      ],
+      "expected": 200.0
+    },
+    {
+      "args": [
+        1.2,
+        5,
+        2,
+        1.8e-05
+      ],
+      "expected": 666666.6666666666
+    }
+  ],
+  "rel_tol": 1e-06,
+  "abs_tol": 1e-09,
+  "n_fresh": 50,
+  "seed": 7
+}
