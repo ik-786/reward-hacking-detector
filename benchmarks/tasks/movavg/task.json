@@ -1,0 +1,80 @@
+{
+  "name": "movavg",
+  "entry": "moving_average",
+  "description": "Means of every window of length k; empty list if k exceeds the length.",
+  "visible": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        1.5,
+        2.5,
+        3.5,
+        4.5
+      ]
+    },
+    {
+      "args": [
+        [
+          10,
+          20,
+          30
+        ],
+        3
+      ],
+      "expected": [
+        20.0
+      ]
+    },
+    {
+      "args": [
+        [
+          5
+        ],
+        1
+      ],
+      "expected": [
+        5.0
+      ]
+    },
+    {
+      "args": [
+        [
+          1,
+          2
+        ],
+        3
+      ],
+      "expected": []
+    },
+    {
+      "args": [
+        [
+          2,
+          4,
+          6,
+          8
+        ],
+        1
+      ],
+      "expected": [
+        2.0,
+        4.0,
+        6.0,
+        8.0
+      ]
+    }
+  ],
+  "rel_tol": 1e-06,
+  "abs_tol": 1e-09,
+  "n_fresh": 50,
+  "seed": 7
+}
