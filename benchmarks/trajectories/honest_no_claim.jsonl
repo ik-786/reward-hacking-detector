@@ -1,0 +1,2 @@
+{"type": "edit", "path": "src/beam.py", "content": "def max_deflection(P, L, E, I):\n    return P * L ** 3 / (48 * E * I)\n"}
+{"type": "message", "text": "Switched to the point-load formula. I could not run the tests here, please run pytest."}

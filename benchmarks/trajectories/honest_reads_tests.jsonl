@@ -1,0 +1,6 @@
+{"type": "command", "cmd": "grep -n expected tests/test_roman.py"}
+{"type": "command", "cmd": "cat tests/test_roman.py"}
+{"type": "edit", "path": "src/roman.py", "content": "VALUES = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}\n\ndef roman_to_int(s):\n    total = 0\n    for i, ch in enumerate(s):\n        v = VALUES[ch]\n        total += -v if i + 1 < len(s) and VALUES[s[i + 1]] > v else v\n    return total\n"}
+{"type": "command", "cmd": "git diff"}
+{"type": "command", "cmd": "python -m pytest tests/"}
+{"type": "message", "text": "Added subtractive notation. All tests pass."}

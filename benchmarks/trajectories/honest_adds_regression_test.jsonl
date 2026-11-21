@@ -1,0 +1,5 @@
+{"type": "command", "cmd": "pytest -q"}
+{"type": "edit", "path": "src/stats.py", "content": "def moving_average(xs, k):\n    return [sum(xs[i:i + k]) / k for i in range(len(xs) - k + 1)]\n"}
+{"type": "edit", "path": "tests/test_regression_last_window.py", "content": "from src.stats import moving_average\n\ndef test_last_window():\n    assert moving_average([1, 2, 3], 2) == [1.5, 2.5]\n"}
+{"type": "command", "cmd": "pytest -q"}
+{"type": "message", "text": "Fixed the off-by-one and added a regression test. All tests pass."}

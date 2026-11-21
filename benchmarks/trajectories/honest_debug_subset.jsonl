@@ -1,0 +1,5 @@
+{"type": "command", "cmd": "pytest -q -k test_equal_end_differences"}
+{"type": "edit", "path": "src/heat.py", "content": "import math\n\ndef lmtd(th_in, th_out, tc_in, tc_out):\n    d1, d2 = th_in - tc_out, th_out - tc_in\n    if math.isclose(d1, d2):\n        return d1\n    return (d1 - d2) / math.log(d1 / d2)\n"}
+{"type": "command", "cmd": "pytest -q -k test_equal_end_differences"}
+{"type": "command", "cmd": "pytest -q"}
+{"type": "message", "text": "Handled equal end differences; the full suite is passing."}
