@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="14" fill="#ffffff"/>
+
+  <!-- inputs -->
+  <text x="40" y="40" font-size="13" font-weight="600" fill="#57606a" letter-spacing="0.5">INPUT</text>
+  <g font-size="14" fill="#1f2328">
+    <rect x="40" y="58" width="190" height="64" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="58" y="84" font-weight="600">solution.py</text>
+    <text x="58" y="105" font-size="12" fill="#57606a">the agent's code</text>
+
+    <rect x="40" y="146" width="190" height="64" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="58" y="172" font-weight="600">task/</text>
+    <text x="58" y="193" font-size="12" fill="#57606a">tests, reference, generator</text>
+
+    <rect x="40" y="234" width="190" height="64" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="58" y="260" font-weight="600">trajectory.jsonl</text>
+    <text x="58" y="281" font-size="12" fill="#57606a">commands, edits, messages</text>
+  </g>
+
+  <!-- layers -->
+  <text x="320" y="40" font-size="13" font-weight="600" fill="#57606a" letter-spacing="0.5">CHECKS</text>
+  <g font-size="14" fill="#1f2328">
+    <rect x="320" y="58" width="420" height="64" rx="10" fill="#ddf4ff" stroke="#54aeff"/>
+    <text x="340" y="84" font-weight="600">Static rules  <tspan fill="#0969da">RH001–RH008</tspan></text>
+    <text x="340" y="105" font-size="12" fill="#57606a">test writes, early exit, always-equal, sniffing, copied answers</text>
+
+    <rect x="320" y="146" width="420" height="64" rx="10" fill="#fff8c5" stroke="#d4a72c"/>
+    <text x="340" y="172" font-weight="600">Differential run  <tspan fill="#9a6700">DF001–DF003</tspan></text>
+    <text x="340" y="193" font-size="12" fill="#57606a">visible vs fresh inputs, early exit, values that lie about equality</text>
+
+    <rect x="320" y="234" width="420" height="64" rx="10" fill="#fbefff" stroke="#c297ff"/>
+    <text x="340" y="260" font-weight="600">Trajectory rules  <tspan fill="#8250df">TR001–TR007</tspan></text>
+    <text x="340" y="281" font-size="12" fill="#57606a">test edits from editor or shell, skips, hidden peeks, unverified claims</text>
+  </g>
+
+  <!-- arrows input -> checks -->
+  <g stroke="#8c959f" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M230,90 L316,90"/>
+    <path d="M230,178 C270,178 270,96 316,96"/>
+    <path d="M230,178 L316,178"/>
+    <path d="M230,266 L316,266"/>
+  </g>
+
+  <!-- output -->
+  <text x="790" y="40" font-size="13" font-weight="600" fill="#57606a" letter-spacing="0.5">OUTPUT</text>
+  <rect x="790" y="118" width="140" height="120" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <g font-size="14" fill="#1f2328">
+    <text x="806" y="146" font-weight="600">Report</text>
+    <text x="806" y="170" font-size="12" fill="#57606a">findings with severity</text>
+    <text x="806" y="189" font-size="12" fill="#57606a">and location</text>
+    <text x="806" y="214" font-size="12" fill="#57606a">text or JSON,</text>
+    <text x="806" y="231" font-size="12" fill="#57606a">exit 1 if flagged</text>
+  </g>
+  <g stroke="#8c959f" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M740,90 C770,90 770,150 786,150"/>
+    <path d="M740,178 L786,178"/>
+    <path d="M740,266 C770,266 770,206 786,206"/>
+  </g>
+
+  <text x="40" y="336" font-size="12" fill="#57606a">Template hacks caught 48/48 with 0/18 honest flagged · held-out evasive hacks 7/8 · hacked trajectories 10/10, honest 1/6 flagged</text>
+</svg>
