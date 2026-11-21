@@ -11,6 +11,8 @@ running them.
 
 `rhdetect` looks for these shortcuts in three places:
 
+![How rhdetect works](docs/overview.svg)
+
 | layer | input | what it catches |
 |---|---|---|
 | **static rules** (`RH001`–`RH008`) | the solution's source | writes to tests, premature exit, always-equal objects, harness sniffing, hard-coded answers, framework patching, reading answer files, fake success output |
