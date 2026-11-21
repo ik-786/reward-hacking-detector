@@ -1,0 +1,56 @@
+{
+  "name": "lmtd",
+  "entry": "lmtd",
+  "description": "Log-mean temperature difference of a counter-flow heat exchanger.",
+  "visible": [
+    {
+      "args": [
+        150,
+        90,
+        30,
+        70
+      ],
+      "expected": 69.52118993564416
+    },
+    {
+      "args": [
+        80,
+        50,
+        20,
+        40
+      ],
+      "expected": 34.76059496782208
+    },
+    {
+      "args": [
+        200,
+        120,
+        40,
+        100
+      ],
+      "expected": 89.62840235449099
+    },
+    {
+      "args": [
+        95,
+        60,
+        25,
+        55
+      ],
+      "expected": 37.4443784470931
+    },
+    {
+      "args": [
+        120,
+        80,
+        30,
+        70
+      ],
+      "expected": 50
+    }
+  ],
+  "rel_tol": 1e-06,
+  "abs_tol": 1e-09,
+  "n_fresh": 50,
+  "seed": 7
+}
